@@ -1,0 +1,68 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://admob-lib/admob.gd" type="Script" id=1]
+[ext_resource path="res://src/menu/cutscene.gd" type="Script" id=2]
+[ext_resource path="res://assets/back.png" type="Texture" id=3]
+[ext_resource path="res://assets/Born2bSportyV2.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 85
+font_data = ExtResource( 4 )
+
+[node name="cutscene" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 225.0
+margin_bottom = 680.0
+rect_scale = Vector2( 2.22509, 1.13156 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="next level" type="Button" parent="."]
+margin_left = 76.9512
+margin_top = 306.685
+margin_right = 401.951
+margin_bottom = 424.685
+text = "next level"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="menu button" type="Button" parent="."]
+margin_left = 76.9512
+margin_top = 487.0
+margin_right = 401.951
+margin_bottom = 615.0
+text = "menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 4.29889
+margin_top = 144.637
+margin_right = 491.299
+margin_bottom = 334.637
+rect_min_size = Vector2( 0, 190 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "CUBE LABYRiNTH"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AdMob2" type="Node" parent="."]
+script = ExtResource( 1 )
+is_real = true
+interstitial_id = "ca-app-pub-2123703602619663/3413159805"
+[connection signal="pressed" from="next level" to="." method="_on_next_level_pressed"]
+[connection signal="pressed" from="menu button" to="." method="_on_menu_button_pressed"]
