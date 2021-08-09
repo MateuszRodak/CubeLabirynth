@@ -1,0 +1,174 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/menu/mapsy.gd" type="Script" id=1]
+[ext_resource path="res://assets/back.png" type="Texture" id=2]
+
+[node name="mapsy" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 500.0
+margin_bottom = 770.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_right = 500.0
+margin_bottom = 770.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 50.0
+margin_top = 211.0
+margin_right = 450.0
+margin_bottom = 559.0
+
+[node name="mapytutorial" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
+margin_right = 400.0
+margin_bottom = 86.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer/mapytutorial"]
+margin_right = 400.0
+margin_bottom = 86.0
+rect_min_size = Vector2( 400, 0 )
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/mapytutorial/VBoxContainer"]
+margin_right = 400.0
+margin_bottom = 14.0
+text = "Tutorial"
+
+[node name="LVL1" type="Button" parent="CenterContainer/VBoxContainer/mapytutorial/VBoxContainer"]
+margin_top = 18.0
+margin_right = 400.0
+margin_bottom = 38.0
+text = "LVL1"
+
+[node name="LVL2" type="Button" parent="CenterContainer/VBoxContainer/mapytutorial/VBoxContainer"]
+margin_top = 42.0
+margin_right = 400.0
+margin_bottom = 62.0
+text = "LVL2"
+
+[node name="LVL3" type="Button" parent="CenterContainer/VBoxContainer/mapytutorial/VBoxContainer"]
+margin_top = 66.0
+margin_right = 400.0
+margin_bottom = 86.0
+text = "LVL3"
+
+[node name="mapy 15x15" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 90.0
+margin_right = 400.0
+margin_bottom = 241.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer/mapy 15x15"]
+margin_right = 400.0
+margin_bottom = 151.0
+rect_min_size = Vector2( 400, 0 )
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/mapy 15x15/VBoxContainer"]
+margin_right = 400.0
+margin_bottom = 31.0
+text = "
+mapy 15x15"
+
+[node name="LVL4" type="Button" parent="CenterContainer/VBoxContainer/mapy 15x15/VBoxContainer"]
+margin_top = 35.0
+margin_right = 400.0
+margin_bottom = 55.0
+text = "LVL4"
+
+[node name="LVL5" type="Button" parent="CenterContainer/VBoxContainer/mapy 15x15/VBoxContainer"]
+margin_top = 59.0
+margin_right = 400.0
+margin_bottom = 79.0
+text = "LVL5"
+
+[node name="LVL6" type="Button" parent="CenterContainer/VBoxContainer/mapy 15x15/VBoxContainer"]
+margin_top = 83.0
+margin_right = 400.0
+margin_bottom = 103.0
+text = "LVL6"
+
+[node name="LVL7" type="Button" parent="CenterContainer/VBoxContainer/mapy 15x15/VBoxContainer"]
+margin_top = 107.0
+margin_right = 400.0
+margin_bottom = 127.0
+text = "LVL7"
+
+[node name="LVL8" type="Button" parent="CenterContainer/VBoxContainer/mapy 15x15/VBoxContainer"]
+margin_top = 131.0
+margin_right = 400.0
+margin_bottom = 151.0
+text = "LVL8"
+
+[node name="mapy 30x30" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 245.0
+margin_right = 400.0
+margin_bottom = 348.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer/mapy 30x30"]
+margin_right = 400.0
+margin_bottom = 103.0
+rect_min_size = Vector2( 400, 0 )
+
+[node name="mapy 30x30" type="Label" parent="CenterContainer/VBoxContainer/mapy 30x30/VBoxContainer"]
+margin_right = 400.0
+margin_bottom = 31.0
+text = "
+mapy 30x30"
+
+[node name="LVL9" type="Button" parent="CenterContainer/VBoxContainer/mapy 30x30/VBoxContainer"]
+margin_top = 35.0
+margin_right = 400.0
+margin_bottom = 55.0
+text = "LVL9"
+
+[node name="LVL10" type="Button" parent="CenterContainer/VBoxContainer/mapy 30x30/VBoxContainer"]
+margin_top = 59.0
+margin_right = 400.0
+margin_bottom = 79.0
+text = "LVL10"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LVL11" type="Button" parent="CenterContainer/VBoxContainer/mapy 30x30/VBoxContainer"]
+margin_top = 83.0
+margin_right = 400.0
+margin_bottom = 103.0
+text = "LVL11"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Button" parent="."]
+margin_left = 50.0
+margin_top = 728.449
+margin_right = 450.0
+margin_bottom = 748.449
+text = "MENU"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="CenterContainer/VBoxContainer/mapytutorial/VBoxContainer/LVL1" to="." method="_on_LVL_pressed" binds= [ 1 ]]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/mapytutorial/VBoxContainer/LVL2" to="." method="_on_LVL_pressed" binds= [ 2 ]]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/mapytutorial/VBoxContainer/LVL3" to="." method="_on_LVL_pressed" binds= [ 3 ]]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/mapy 15x15/VBoxContainer/LVL4" to="." method="_on_LVL_pressed" binds= [ 4 ]]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/mapy 15x15/VBoxContainer/LVL5" to="." method="_on_LVL_pressed" binds= [ 5 ]]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/mapy 15x15/VBoxContainer/LVL6" to="." method="_on_LVL_pressed" binds= [ 6 ]]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/mapy 15x15/VBoxContainer/LVL7" to="." method="_on_LVL_pressed" binds= [ 7 ]]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/mapy 15x15/VBoxContainer/LVL8" to="." method="_on_LVL_pressed" binds= [ 8 ]]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/mapy 30x30/VBoxContainer/LVL9" to="." method="_on_LVL_pressed" binds= [ 9 ]]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/mapy 30x30/VBoxContainer/LVL10" to="." method="_on_LVL_pressed" binds= [ 10 ]]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/mapy 30x30/VBoxContainer/LVL11" to="." method="_on_LVL_pressed" binds= [ 11 ]]
+[connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]

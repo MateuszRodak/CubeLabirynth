@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/back.png" type="Texture" id=1]
+[ext_resource path="res://src/menu/optionscene.gd" type="Script" id=2]
+[ext_resource path="res://assets/sounds/Heavenly Music - Gaming Sound Effect (HD).wav" type="AudioStream" id=3]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 500.0
+margin_bottom = 770.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="music" type="Button" parent="."]
+margin_left = 120.343
+margin_top = 344.799
+margin_right = 361.343
+margin_bottom = 422.799
+text = "music"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="menu" type="Button" parent="."]
+margin_left = 120.343
+margin_top = 476.553
+margin_right = 361.343
+margin_bottom = 554.553
+text = "menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Reset" type="Button" parent="."]
+margin_left = 120.343
+margin_top = 214.539
+margin_right = 361.343
+margin_bottom = 291.539
+text = "reset"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IntroSound2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -7.068
+[connection signal="pressed" from="music" to="." method="_on_music_pressed"]
+[connection signal="pressed" from="menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="Reset" to="." method="_on_Reset_pressed"]
